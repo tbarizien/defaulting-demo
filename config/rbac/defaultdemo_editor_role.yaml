@@ -1,0 +1,24 @@
+# permissions for end users to edit defaultdemoes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: defaultdemo-editor-role
+rules:
+- apiGroups:
+  - default.example.com
+  resources:
+  - defaultdemoes
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - default.example.com
+  resources:
+  - defaultdemoes/status
+  verbs:
+  - get

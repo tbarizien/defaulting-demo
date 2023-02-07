@@ -1,0 +1,20 @@
+# permissions for end users to view defaultdemoes.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: defaultdemo-viewer-role
+rules:
+- apiGroups:
+  - default.example.com
+  resources:
+  - defaultdemoes
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - default.example.com
+  resources:
+  - defaultdemoes/status
+  verbs:
+  - get

@@ -1,0 +1,6 @@
+apiVersion: default.example.com/v1
+kind: DefaultDemo
+metadata:
+  name: defaultdemo-sample
+spec:
+  # TODO(user): Add fields here

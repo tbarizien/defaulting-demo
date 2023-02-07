@@ -6,4 +6,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: defaulting-demo
 repo: github.com/tbarizien/defaulting-demo
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: example.com
+  group: default
+  kind: DefaultDemo
+  path: github.com/tbarizien/defaulting-demo/api/v1
+  version: v1
 version: "3"
