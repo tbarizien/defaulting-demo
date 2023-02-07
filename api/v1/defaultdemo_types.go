@@ -30,6 +30,20 @@ type DefaultDemoSpec struct {
 
 	// Foo is an example field of DefaultDemo. Edit defaultdemo_types.go to remove/update
 	Foo string `json:"foo,omitempty"`
+
+	//+optional
+	//+kubebuilder:default:={horsePower:40}
+	Car *Car `json:"car,omitempty"`
+}
+
+type Car struct {
+	//+optional
+	//+kubebuilder:default:=50
+	Horsepower *int `json:"horsePower,omitempty"`
+
+	//+optional
+	//+kubebuilder:default:=4
+	Wheels *int `json:"wheels,omitempty"`
 }
 
 // DefaultDemoStatus defines the observed state of DefaultDemo

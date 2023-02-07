@@ -35,6 +35,17 @@ spec:
           spec:
             description: DefaultDemoSpec defines the desired state of DefaultDemo
             properties:
+              car:
+                default:
+                  horsePower: 40
+                properties:
+                  horsePower:
+                    default: 50
+                    type: integer
+                  wheels:
+                    default: 4
+                    type: integer
+                type: object
               foo:
                 description: Foo is an example field of DefaultDemo. Edit defaultdemo_types.go
                   to remove/update
